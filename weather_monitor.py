@@ -16,16 +16,16 @@ FETCH_INTERVAL = 300
 # Ask user for temperature unit preference
 def get_temperature_unit_preference():
     print("Select temperature unit:")
-    print("1. Celsius")
-    print("2. Fahrenheit")
-    print("3. Kelvin")
-    choice = input("Enter choice (1/2/3): ").strip()
+    print(" Celsius")
+    print(" Fahrenheit")
+    print(" Kelvin")
+    choice = input("Enter choice (C/F/K): ").strip()
 
-    if choice == '1':
+    if choice == 'C':
         return 'metric', '°C'
-    elif choice == '2':
+    elif choice == 'F':
         return 'imperial', '°F'
-    elif choice == '3':
+    elif choice == 'K':
         return None, 'K'  # Kelvin is default
     else:
         print("Invalid choice! Defaulting to Celsius.")
